@@ -1,0 +1,139 @@
+/* styles.css - include this in your existing CSS file */
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.drag-area {
+    width: 90vw;
+    height: 50vh;
+    border: 2px dashed #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.file-input-label {
+    font-size: 48px;
+    color: rgb(0, 98, 102);
+    cursor: pointer;
+    position: absolute;
+    top: 6%;
+    left: 96%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.quote {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-align: center;
+    font-style: normal;
+}
+
+.quoteAuthor {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-size: 1em;
+    font-style: normal;
+}
+
+#file-list {
+    width: 400px;
+    height: 50px;
+    min-height: 15px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* Update styles for the file items */
+#file-list .file-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align content to both ends */
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    font-size: 0.7em;
+    border-radius: 5px;
+    padding: 5px; /* Reduce padding */
+    border: 1px solid #ddd;
+}
+
+/* Update styles for the delete button */
+.delete-btn {
+    position: relative;
+    margin-right: -10px;
+    margin-top: 0px;
+    font-size: 15px;
+    color: #ff0000; /* Change color to red */
+    cursor: pointer;
+    border: none;
+    background: none; /* Remove background */
+}
+
+/* Add hover effect for delete button */
+.delete-btn:hover {
+    color: #cc0000; /* Darker red on hover */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    
+    font-size: 16px;
+    background-color: rgb(0, 98, 102);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(0, 98, 102);
+}
+
+
+/* Add these new styles for mobile devices */
+@media (max-width: 600px) {
+    .drag-area, #file-list {
+        width: 50vw; /* Wider on mobile for better use of space */
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .drag-area {
+        min-height: 30vh; /* Slightly shorter to fit mobile screens better */
+        padding: 10px; /* Reduced padding */
+        font-size: 16px; /* Adjust text size for better readability */
+    }
+
+    #file-list .file-item {
+        font-size: 14px; /* Smaller text in file list items */
+    }
+
+    button {
+        width: 90%; /* Make button wider to fit the screen */
+        padding: 12px 0; /* Increase padding for easier tapping */
+        font-size: 18px; /* Larger font size for better readability */
+    }
+}

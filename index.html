@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BauOrdiCom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="drag-area" id="drop_zone" title="Drag and drop PDF files here or click the + to select files">
+        <label for="file-input" class="file-input-label">+</label>
+        <input type="file" id="file-input" multiple style="display: none;">
+        <div>
+            <p class="quote" id="quote"></p>
+            <br>
+            <p class="quoteAuthor" id="quoteAuthor" style="text-align: right;"></p>
+        </div>
+    </div>
+    <div id="file-list"></div>
+    <button id="combine">Combine</button>
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+
+    <!-- Include pdf.js and its worker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js"></script>
+    
+    <!-- PDF-lib Library -->
+    <script src="https://unpkg.com/pdf-lib@1.4.0/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js" defer></script>
+
+    <!-- Custom Script -->
+    <script src="script.js" defer></script>
+    <script src="quotes.js" defer></script>
+</html>
