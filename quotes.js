@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchQuote() {
         try {
             // Fetch data from the ZenQuotes API using a CORS proxy
-            // const response = await fetch('https://api.allorigins.win/get?url=https://zenquotes.io/api/random');
-            const response = await fetch('https://zenquotes.io/api/random');
+            const response = await fetch('https://api.allorigins.win/get?url=https://zenquotes.io/api/random');
+            // const response = await fetch('https://zenquotes.io/api/random');
             // Check if the response is OK
             if (response.ok) {
                 // Parse the response JSON
